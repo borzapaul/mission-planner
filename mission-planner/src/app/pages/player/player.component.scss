@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.left {
+    width: 30%;
+}
+
+.right {
+    width: 70%;
+}
+
+.button{
+    margin: 5px;
+}
+
+.canvas-border{
+    border: 2px solid black;
+}

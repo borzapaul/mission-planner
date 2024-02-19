@@ -17,6 +17,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { TableComponent } from './shared/table/table.component';
+import { CanvasComponent } from './shared/canvas/canvas.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { TableComponent } from './shared/table/table.component';
     PlannerComponent,
     PlayerComponent,
     TableComponent,
+    CanvasComponent,
   ],
   imports: [
     BrowserModule,

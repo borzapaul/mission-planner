@@ -1,1 +1,25 @@
-<p>Player</p>
+<h2>Player</h2>
+
+<div *ngIf="points.length > 0" class="container">
+    <div class="left">
+        <p>Mission:</p>
+        <ul>
+            <li *ngFor="let point of points">
+                {{ point.name }}
+            </li>
+        </ul>
+    </div>
+    <div class="right">
+        <div class="canvas-border">
+            <app-canvas [points]="points" [canvasH]="500" [canvasW]="500" [isMoving]="isMoving"></app-canvas>
+        </div>
+        <div>
+            <button mat-raised-button (click)="startMoving()" class="button">
+                <i class="material-icons">play_circle_filled</i>
+            </button>
+            <button mat-raised-button (click)="stopMoving()" class="button">
+                <i class="material-icons">stop</i>
+            </button>
+        </div>
+    </div>
+</div>
