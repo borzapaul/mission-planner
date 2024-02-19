@@ -2,6 +2,13 @@
   flex: 1 1 auto;
 }
 
+.sticky-toolbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; 
+}
+
 .logo {
   width: 100px;
   cursor: pointer;
