@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { ToolbarComponent } from './shared/toolbar/toolbar.component';
+import { ToolbarComponent } from './layouts/toolbar/toolbar.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { HomeComponent } from './pages/home/home.component';
 import { PlannerComponent } from './pages/planner/planner.component';
