@@ -1,0 +1,23 @@
+<h2>Planner</h2>
+
+<div class="input-content">
+  <div class="item">
+    <label for="pointName">Name:</label>
+    <input id="pointName" placeholder="Name" [(ngModel)]="newPoint.name" />
+  </div>
+  <div class="item">
+    <label for="pointX">X:</label>
+    <input id="pointX" placeholder="X" [(ngModel)]="newPoint.x" />
+  </div>
+  <div class="item">
+    <label for="pointY">Y:</label>
+    <input id="pointY" placeholder="Y" [(ngModel)]="newPoint.y" />
+  </div>
+  <div>
+    <button mat-raised-button (click)="addNewPoint()">Add Point</button>
+  </div>
+</div>
+
+<div *ngIf="points.length > 0" class="table-content">
+  <app-table [points]="points"></app-table>
+</div>
