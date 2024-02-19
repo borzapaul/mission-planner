@@ -10,7 +10,9 @@
         </ul>
     </div>
     <div class="right">
-        <app-canvas [points]="points" [canvasH]="500" [canvasW]="500" [isMoving]="isMoving"></app-canvas>
+        <div class="canvas-border">
+            <app-canvas [points]="points" [canvasH]="500" [canvasW]="500" [isMoving]="isMoving"></app-canvas>
+        </div>
         <div>
             <button mat-raised-button (click)="startMoving()" class="button">
                 <i class="material-icons">play_circle_filled</i>
