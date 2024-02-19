@@ -1,21 +1,28 @@
 <h2>Planner</h2>
 
 <div class="input-content">
-  <div class="item">
-    <label for="pointName">Name:</label>
-    <input id="pointName" placeholder="Name" [(ngModel)]="newPoint.name" />
-  </div>
-  <div class="item">
-    <label for="pointX">X:</label>
-    <input id="pointX" placeholder="X" [(ngModel)]="newPoint.x" />
-  </div>
-  <div class="item">
-    <label for="pointY">Y:</label>
-    <input id="pointY" placeholder="Y" [(ngModel)]="newPoint.y" />
-  </div>
-  <div>
-    <button mat-raised-button (click)="addNewPoint()">Add Point</button>
-  </div>
+  <form [formGroup]="form">
+    <mat-form-field class="item">
+      <mat-label>Name</mat-label>
+      <input type="text" matInput [formControl]="nameFormControl" placeholder="Name" />
+      <mat-error *ngIf="form.invalid">{{ getErrorMessage("name") }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="item">
+      <mat-label>X</mat-label>
+      <input type="text" matInput [formControl]="xFormControl" placeholder="X" />
+      <mat-error *ngIf="form.invalid">{{ getErrorMessage("x") }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="item">
+      <mat-label>Y</mat-label>
+      <input type="text" matInput [formControl]="yFormControl" placeholder="Y" />
+      <mat-error *ngIf="form.invalid">{{ getErrorMessage("y") }}</mat-error>
+    </mat-form-field>
+    <div>
+      <button mat-raised-button (click)="addNewPoint()">Add Point</button>
+    </div>
+  </form>
 </div>
 
 <div *ngIf="points.length > 0" class="table-content">

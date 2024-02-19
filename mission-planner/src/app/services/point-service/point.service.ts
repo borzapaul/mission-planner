@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
+import { AppStore } from 'src/app/app-store';
 import { Point } from 'src/app/models/point';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PointService {
-
   points: Point[] = [];
 
-  constructor() { }
+  constructor() {}
 
   addPoint(point: Point) {
-    this.points.push(point);
+    this.points = [...this.points, point];
+    AppStore.points$.next(this.points);
   }
 
   getPoints() {

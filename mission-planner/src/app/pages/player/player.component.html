@@ -3,14 +3,14 @@
 <div *ngIf="points.length > 0" class="container">
     <div class="left">
         <p>Mission:</p>
-        <ul>
+        <ol>
             <li *ngFor="let point of points">
                 {{ point.name }}
             </li>
-        </ul>
+        </ol>
     </div>
     <div class="right">
-        <div class="canvas-border">
+        <div>
             <app-canvas [points]="points" [canvasH]="500" [canvasW]="500" [isMoving]="isMoving"></app-canvas>
         </div>
         <div>
