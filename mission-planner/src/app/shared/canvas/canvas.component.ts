@@ -41,8 +41,6 @@ export class CanvasComponent implements AfterViewInit, OnChanges {
           ctx.fillText(point.name, point.x, point.y - 10); // avoiding overlap
         }
       });
-
-      // this.drawLinesWithDelay(ctx, this.points, 0);
     }
   }
 
