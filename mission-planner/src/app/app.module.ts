@@ -7,10 +7,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { HomeComponent } from './home/home.component';
+import { PlannerComponent } from './planner/planner.component';
+import { PlayerComponent } from './player/player.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToolbarComponent,
+    HomeComponent,
+    PlannerComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +27,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     BrowserAnimationsModule,
     MatToolbarModule, 
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
